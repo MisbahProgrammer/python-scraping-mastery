@@ -3,7 +3,7 @@
 # This proves I can extract data from the web.
 
 import requests
-from bs4 import BeautifulSoup
+from BS4 import BeautifulSoup
 import csv
 
 # 1. The Target URL (A safe place to practice scraping)
