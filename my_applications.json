@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "university": "ITMO University",
+        "program": "02.03.03 Software & Administration",
+        "physics_exam": false,
+        "seats_available": 13
+    },
+    {
+        "id": 2,
+        "university": "MISIS",
+        "program": "09.03.01 Computer Engineering",
+        "physics_exam": true,
+        "seats_available": 50
+    }
+]
