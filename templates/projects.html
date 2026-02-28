@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misbah's Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans p-10">
+
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-center mb-10 text-blue-400">🚀 My Code Portfolio</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {% for project in projects %}
+            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-semibold">{{ project[1] }}</h2> <span class="bg-blue-900 text-blue-300 py-1 px-3 rounded-full text-sm">
+                        {{ project[2] }} </span>
+                </div>
+                <p class="text-gray-400">Project ID: #{{ project[0] }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% if not projects %}
+        <div class="text-center text-gray-500 mt-10">
+            <p>No projects found. Use the Day 11 Client to add some!</p>
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
