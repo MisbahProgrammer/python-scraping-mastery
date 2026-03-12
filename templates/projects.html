@@ -40,11 +40,17 @@
                     <p class="text-gray-500 text-sm mb-4">Project ID: #{{ project[0] }}</p>
                 </div>
                 
-                <form action="/delete/{{ project[0] }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this project?');">
-                    <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded text-sm w-full transition font-semibold">
-                        🗑️ Delete Project
-                    </button>
-                </form>
+                <div class="flex gap-2 mt-4">
+                    <a href="/edit/{{ project[0] }}" class="bg-yellow-600 hover:bg-yellow-700 text-white px-3 py-1.5 rounded text-sm w-full transition font-semibold text-center">
+                        ✏️ Edit
+                    </a>
+                    
+                    <form action="/delete/{{ project[0] }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this project?');" class="w-full">
+                        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded text-sm w-full transition font-semibold">
+                            🗑️ Delete
+                        </button>
+                    </form>
+                </div>
             </div>
             {% endfor %}
         </div>
